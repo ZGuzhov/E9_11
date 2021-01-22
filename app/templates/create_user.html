@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Регистрация нового пользователя{% endblock %}
+{% block content %}
+  <div class="formwrapper">
+    <h2 class="title">Создать</h2>
+    <form method="POST">
+      {{ form.csrf_token }}
+      <div class="form-field">
+        {{ form.email.label }} {{ form.email }}
+      </div>
+      <div class="form-field">
+        {{ form.password.label }} {{ form.password }}
+      </div>
+      <input type="submit" value="Зарегистрироваться"> {{ form.submit }}
+    </form>
+  </div>
+{% endblock %}
